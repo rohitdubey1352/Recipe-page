@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+/* font-family: "Outfit", sans-serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    flex-direction: column;
+    padding: 124px;
+    background: hsl(30, 54%, 90%);
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-size: 1rem;
+}
+
+h2 {
+    margin: 1rem 0;
+    font-size: 2rem;
+    letter-spacing: .08rem;
+    font-weight: 400;
+    font-family: 'Young Serif';
+    color: hsl(14, 45%, 36%);
+}
+
+
+/* page_container */
+.page_container {
+    position: relative;
+    width: 46rem;
+    height: 100%;
+    min-height: 106.75rem;
+    border-radius: 1.5rem;
+    background: #FFF;
+    padding: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: column;
+}
+
+.page_container img {
+    width: 41rem;
+    height: 18.75rem;
+    border-radius: .875rem;
+    margin-bottom: 3.2rem;
+}
+
+.page_container h1 {
+    font-family: 'Young Serif';
+    color: hsl(24, 5%, 18%);
+    font-weight: 400;
+}
+
+.page_container p {
+    font-family: "Outfit", sans-serif;
+    color: hsl(30, 10%, 34%);
+    margin: 1rem 0 2rem 0;
+    line-height: 162%;
+}
+
+/* time */
+
+.time {
+    position: relative;
+    width: 41rem;
+    height: 11.25rem;
+    border-radius: 0.875rem;
+    background: #FFF7FC;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    font-family: "Outfit", sans-serif;
+    padding-left: 2rem;
+}
+
+.time h3 {
+    color: hsl(332, 51%, 32%);
+    margin-bottom: 1rem;
+}
+
+.time ul {
+    padding-left: 1rem;
+}
+
+.time ul span {
+    font-weight: 800;
+    color: hsl(30, 10%, 34%);
+}
+
+.time li {
+    color: hsl(30, 10%, 34%);
+    letter-spacing: .03rem;
+    padding-left: 1.8rem;
+    font-weight: 400;
+}
+
+li::marker {
+    color: hsl(332, 51%, 32%);
+    font-size: .88rem;
+}
+
+/* ingredients */
+.ingredients {
+    position: relative;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+.ingredients ul {
+    padding-left: 1.2rem;
+}
+
+.ingredients ul li {
+    font-family: "Outfit", sans-serif;
+    padding-left: 1.4rem;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.02rem;
+    line-height: 180%;
+    color: hsl(30, 10%, 34%);
+}
+
+.ingredients span,
+.Instructions span {
+    position: absolute;
+    width: 100%;
+    height: .04rem;
+    bottom: -2rem;
+    background: hsl(30, 18%, 87%);
+}
+
+/* Instructions */
+.Instructions {
+    position: relative;
+    height: auto;
+    margin: 1.2rem 0;
+}
+
+.Instructions ol {
+    padding-left: 1.2rem;
+}
+
+.Instructions li {
+    font-family: "Outfit", sans-serif;
+    padding-left: 1.4rem;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.02rem;
+    line-height: 165%;
+    color: hsl(30, 10%, 34%);
+    margin: .8rem 0;
+}
+
+.Instructions li::marker {
+    font-weight: 700;
+}
+
+/* Nutrition */
+.Nutrition {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 1.4rem 0;
+}
+
+.nutrition_table .row {
+    position: relative;
+    width: 100%;
+    height: 2rem;
+    display: grid;
+    text-align: left;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    font-family: "Outfit", sans-serif;
+    border-bottom: 1px solid hsl(30, 18%, 87%);
+    padding: 0 1.4rem 2.4rem 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.row h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: hsl(330, 2%, 65%);
+}
+
+.row h5 {
+    color: hsl(14, 45%, 36%);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* Responsive */
+@media screen and (max-width: 720px) {
+    body {
+        padding: 0px;
+        background: #fff;
+    }
+
+    .page_container {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+    }
+
+    .recipe,
+    .ingredients,
+    .Instructions,
+    .Nutrition {
+        padding: 1rem;
+    }
+
+    .time {
+        width: 100%;
+    }
+
+    .page_container img {
+        width: 100%;
+        height: 182px;
+        border-radius: 0;
+    }
+
+    .ingredients span,
+    .Instructions span {
+        display: none;
+    }
+
+}
